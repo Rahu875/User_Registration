@@ -27,3 +27,11 @@ then
 else
 	echo "Email is not valid"
 fi
+read -p "Enter the mobile no:" m
+pat5="^[1-9]{2}" "[0-9]{10}$"
+if [[ $m =~ $pat5 ]]
+then
+	echo "Mobile no verified sucessfully"
+else
+	echo "Mobile no verification filed"
+fi
