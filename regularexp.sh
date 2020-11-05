@@ -48,3 +48,15 @@ then
 else
 	echo "paasword not verified,plese satisfy the conditions"
 fi
+read -p "Enter the Emailaddress :" e
+pat7="^[A-Za-z._%+-]+\.[a-z]]+@[A-Za-z.-]+\.[A-Za-z]{2,}+\.[A-Za-z]{2,}$"
+pat8="^[A-Za-z._%+-]+@[A-Za-z.-]+\.[A-Za-z]{2,}"
+if [[ $e =~ $pat3 ]]
+then
+        echo "Email is valid"
+elif [[ $e =~ $pat4 ]]
+then
+        echo "Email is valid"
+else
+        echo "Email is not valid"
+fi
