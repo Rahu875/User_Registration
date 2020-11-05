@@ -28,10 +28,23 @@ else
 	echo "Email is not valid"
 fi
 read -p "Enter the mobile no:" m
-pat5="^[1-9]{2}" "[0-9]{10}$"
+pat5="^[1-9]{0,2}" "[0-9]{0,10}$"
 if [[ $m =~ $pat5 ]]
 then
 	echo "Mobile no verified sucessfully"
 else
 	echo "Mobile no verification filed"
+fi
+echo "password must contain:"
+echo "minimum 8 Characters"
+echo "at least 1 Upper Case"
+echo "at least 1 numeric number"
+echo  "has exactly 1 Special Character"
+read -p "Enter the password: " p
+pat6="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]){8,}$"
+if [[ $p =~ $pat6 ]]
+then
+	echo "password verified sucessfully"
+else
+	echo "paasword not verified,plese satisfy the conditions"
 fi
