@@ -15,3 +15,15 @@ then
 else
 	echo "last name is not valid"
 fi
+read -p "Enter the mail:" z
+pat3="^[A-Za-z._%+-]+\.[a-z]]+@[A-Za-z.-]+\.[A-Za-z]{2,}+\.[A-Za-z]{2,}$"
+pat4="^[A-Za-z._%+-]+@[A-Za-z.-]+\.[A-Za-z]{2,}"
+if [[ $z =~ $pat3 ]]
+then
+	echo "Email is valid"
+elif [[ $z =~ $pat4 ]]
+then
+	echo "Email is valid"
+else
+	echo "Email is not valid"
+fi
