@@ -7,3 +7,11 @@ then
 else
 	echo "name is not valid"
 fi
+pat2="^([A-Z]{1,}[a-zA-Z]{2,})$"
+read -p "Enter the last NAME:" y
+if [[ $y =~ $pat2 ]]
+then
+	echo "last name is valid"
+else
+	echo "last name is not valid"
+fi
